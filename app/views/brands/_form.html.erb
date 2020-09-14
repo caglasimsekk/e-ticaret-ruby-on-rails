@@ -1,0 +1,44 @@
+<%= form_with model: @brand, local: true do |form| %>
+<%
+=begin%>
+Here is the error part, when an error occurs , it shows a msg.
+<%
+=end%>
+<% if @brand.errors.any? %>
+<div id="error_explanation">
+    <h2>
+        <%= pluralize(@brand.errors.count, "error") %> prohibited
+        this brand from being saved:
+    </h2>
+    <ul>
+        <% @brand.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+    </ul>
+</div>
+<% end %>
+
+<p>
+    <%= form.label "Marka Adı" %><br>
+    <%= form.text_field :title %>
+    <%
+=begin%>
+    In here, we enter the input.
+    <%
+=end%>
+</p>
+
+<p>
+    <%= form.submit "Kaydet" %>
+    <%
+=begin%>
+    In here, we press the button and save the data.
+    <%
+=end%>
+</p>
+<%
+=begin%>
+The page of adding brand.
+<%
+=end%>
+<% end %>

@@ -1,0 +1,49 @@
+<h1><span class="glyphicon glyphicon-edit small"></span> Marka Düzenle </h1>
+
+<%= form_with model: @brand, local: true do |form| %>
+<%
+=begin%>
+Here is the error part, when an error occurs , it shows a msg.
+<%
+=end%>
+<% if @brand.errors.any? %>
+<div id="error_explanation">
+    <h2>
+        <%= pluralize(@brand.errors.count, "error") %> prohibited
+        this brand from being saved:
+    </h2>
+    <ul>
+        <% @brand.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+    </ul>
+</div>
+<% end %>
+<div style="margin-top:70px;margin-left:50%;width:100%;">
+    <p>
+        <%= form.label "Marka Adı" %><br>
+        <%= form.text_field :title %>
+        <%
+=begin%>
+        In here, we enter the input to the form.
+        <%
+=end%>
+    </p>
+    <p>
+        <%= form.submit "Kaydet" %>
+        <%
+=begin%>
+        In here , we press the button and save the data.
+        <%
+=end%>
+    </p>
+
+    <% end %>
+
+    <p style="margin-left:80%;"><%= link_to '<< Geri', brands_path %></p>
+    <%
+=begin%>
+    Backing to the main page.
+    <%
+=end%>
+</div>

@@ -1,0 +1,15 @@
+<%= form_with(model: [ @brand, @brand.products.build ], local: true) do |form| %>
+<p>
+    <%= form.text_field :productModel %>
+</p>
+<p>
+    <%= form.submit "Kaydet" %>
+</p>
+<%
+=begin%>
+
+Thanks to here, we can add a product calling the form page.
+
+<%
+=end%>
+<% end %>

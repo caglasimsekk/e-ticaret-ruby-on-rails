@@ -1,0 +1,19 @@
+<table class="table" style="margin-top: 50px; margin-left:35%;   width:30%;">
+    <thead>
+        <tr>
+            <th style="text-align:center;">Ürün Modeli</th>
+            <th>Düzenle</th>
+            <th>Sil</th>
+
+        </tr>
+    </thead>
+    <tr>
+        <td> <%= product.productModel %></td>
+        <td style="width:1%;"> <%= link_to '<span class="glyphicon glyphicon-edit"></span>'.html_safe, [product.brand, product] %></td>
+        <td style="width:1%;"> <%= link_to '<span class="glyphicon glyphicon-trash"></span>'.html_safe, [product.brand, product],
+               method: :delete,
+               data: { confirm: 'Emin misiniz?' } %></td>
+
+    </tr>
+
+</table>

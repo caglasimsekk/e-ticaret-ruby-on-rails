@@ -1,0 +1,2 @@
+class Brands < ApplicationRecord
+end

@@ -1,0 +1,30 @@
+// Place all the styles related to the Products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+//I used inline css in some fields because of it was necessary.
+.app-header {
+
+    background: rgba(202, 53, 53, 0.95);
+    position: center;
+  }
+  .app-footer {
+  
+ background: rgba(53, 144, 202, 0.95);
+    position: relative;
+    .copy {
+      padding-top: 2em;
+      color: rgba(255, 255, 255, 0.6);
+  
+      a {
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: underline;
+  
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }

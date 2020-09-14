@@ -1,0 +1,16 @@
+<h1>
+    <strong>Marka:</strong>
+    <%= @brand.title %>
+</h1>
+<%
+=begin%>
+The page of one brand and that we can add the products.
+<%
+=end%>
+<div style="margin-top:70px;margin-left:50%;width:100%;">
+    <h2>Ürün Ekle:</h2>
+    <%= render 'products/form' %>
+    <%= render @brand.products %>
+    <p style="margin-left:80%;"><%= link_to '<< Geri', brands_path %></p>
+
+</div>
